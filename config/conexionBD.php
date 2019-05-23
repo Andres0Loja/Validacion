@@ -1,18 +1,15 @@
 <?php
-    $db_servername = "localhost";
-    $db_username = "root";
-    $db_password = '';
-    $db_name= "hipermedial";
 
-    //Crear connection
-    $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
-    $conn->set_charset("utf8");
+$servername = "localhost";
+$username = "root";
+$password = "cuenca";
+$dbname = "hipermedial";
 
-    //Check connection
-    if ($conn->connect_error){
-        die("Connection failed: ". $conn->connect_error);
-        echo "Error";
-    }
-    else{
-        echo "<p> Conexión exitosa!! </p>";
-    }
+//Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+//Check connection
+$conn->set_charset('utf8');
+if ($conn->connect_error) {
+    die("Conexión fallida!! :(:" . $conn->connect_error);
+}
+?>
